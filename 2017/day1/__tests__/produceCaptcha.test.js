@@ -12,6 +12,7 @@ describe("produceCaptcha", () => {
     expect(produceCaptcha("112233")).toBe(6);
   });
   it("should return the sum of the repeated number when passes a number with the same number for both the first and the last digit", () => {
+    expect(produceCaptcha("11")).toBe(2);
     expect(produceCaptcha("1111")).toBe(4);
     expect(produceCaptcha("91212129")).toBe(9);
   });
