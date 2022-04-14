@@ -1,8 +1,9 @@
 const produceCaptcha = require("../produceCaptcha");
 
 describe("produceCaptcha", () => {
-  it("should return 0 when passes an empty string", () => {
+  it("should return 0 when passes a string less than 2 digits", () => {
     expect(produceCaptcha("")).toBe(0);
+    expect(produceCaptcha("1")).toBe(0);
   });
   it("should return the repeated number when passes a string with 2 different digits", () => {
     expect(produceCaptcha("12")).toBe(0);
