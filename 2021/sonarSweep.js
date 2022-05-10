@@ -1,4 +1,4 @@
-const puzzleInput = require("./puzzle-input");
+const formatInput = require("./formatInput");
 
 const sonarSweep = (arr) => {
   let count = 0;
@@ -7,5 +7,8 @@ const sonarSweep = (arr) => {
   });
   return count;
 };
-console.log(sonarSweep(puzzleInput));
+
+const puzzleInput = formatInput();
+
+console.log(sonarSweep(puzzleInput), "--part1--");
 module.exports = sonarSweep;
