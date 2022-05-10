@@ -1,6 +1,9 @@
 const sonarSweepPlus = require("../sonarSweepPlus");
 
 describe("sonarSweepPlus", () => {
+  test("should return 0 when passed an empty array", () => {
+    expect(sonarSweepPlus([])).toBe(0);
+  });
   test("should return 0 when passed an array with its length less than 3", () => {
     expect(sonarSweepPlus([1])).toBe(0);
   });
